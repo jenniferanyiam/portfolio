@@ -1,3 +1,4 @@
+![Profile Picture](profile.jpg)
 # Hi, I'm Adaeze Jennifer Anyiam 👋
 
 ### Customer Support Specialist | CRM Virtual Assistant | Executive Support | Sales Support
@@ -20,7 +21,6 @@ I’m a Customer Support Specialist and CRM Virtual Assistant with 3+ years of e
 **Google Workspace • Microsoft Excel • Canva • Trello • Notion • Asana • HubSpot • GoHighLevel • LinkedIn Sales Navigator • Apollo.io • Airbnb • Guesty**
 
 ### 🎯 My Approach
-
 I combine strong communication, organization, customer service, and data-driven thinking to help businesses save time, stay organized, and provide better customer experiences.
 
 ### 📂 Portfolio & Profiles
@@ -29,6 +29,7 @@ I combine strong communication, organization, customer service, and data-driven 
 - 🔗 [LinkedIn](https://www.linkedin.com/in/adaeze-jennifer-anyiam-3972153b4/)
 
 ### 📫 Let's Connect
+📧 Email: [adaezejenniferanyiam@gmail.com](mailto:adaezejenniferanyiam@gmail.com)
 
 I'm open to remote opportunities in **Customer Support, CRM, Virtual Assistance, Executive Support, and Sales Support.**
 
