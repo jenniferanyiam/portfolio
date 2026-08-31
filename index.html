@@ -3,145 +3,632 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Adaeze Jennifer Anyiam | Customer Support & CRM Virtual Assistant</title>
-  <meta name="description" content="Adaeze Jennifer Anyiam - Customer Support Specialist, CRM Virtual Assistant, Executive Support and Sales Support.">
+
+  <meta name="description" content="Adaeze Jennifer Anyiam is a Customer Support Specialist and CRM Virtual Assistant providing customer service, executive support, sales support and administrative assistance.">
+
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f8fc;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #172554;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid white;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      margin: 10px 0;
-      font-size: 36px;
-    }
-
-    header p {
-      font-size: 18px;
-      max-width: 750px;
-      margin: 10px auto;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 12px;
-    }
-
-    h2 {
-      color: #172554;
-      margin-top: 0;
-    }
-
-    ul {
-      padding-left: 25px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background: #e8edff;
-      padding: 8px 14px;
-      border-radius: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #172554;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+      line-height: 1.7;
     }
 
     a {
-      color: #172554;
-      font-weight: bold;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      color: #173b8f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .nav-links a:hover {
+      color: #173b8f;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #102a68, #2563eb);
+      color: white;
+      padding: 90px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      max-width: 1050px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-photo {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid white;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+
+    .hero h2 {
+      font-size: 21px;
+      font-weight: 500;
+      margin: 0 0 20px;
+      opacity: 0.95;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      opacity: 0.95;
+    }
+
+    .buttons {
+      margin-top: 28px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      background: white;
+      color: #173b8f;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #173b8f;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .service h3 {
+      color: #173b8f;
+      margin-top: 0;
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .projects {
+      background: #eef4ff;
+      max-width: none;
+    }
+
+    .project-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 7%;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      border: 1px solid #dbe4f5;
+    }
+
+    .project h3 {
+      color: #173b8f;
+      margin-top: 0;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: #e5edff;
+      color: #173b8f;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .tools {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tool {
+      background: white;
+      border: 1px solid #dbe2ea;
+      padding: 10px 17px;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+
+    .why {
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .why-card strong {
+      display: block;
+      color: #173b8f;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      background: #102a68;
+      color: white;
+      text-align: center;
+      max-width: none;
+    }
+
+    .contact-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: white;
+      color: #173b8f;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #0b1d46;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .about,
+      .services-grid,
+      .project-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <img src="profile.jpg" alt="Adaeze Jennifer Anyiam">
-    <h1>Hi, I'm Adaeze Jennifer Anyiam 👋</h1>
-    <p>Customer Support Specialist | CRM Virtual Assistant | Executive Support | Sales Support</p>
-    <p>
-      I help businesses improve customer satisfaction, stay organized,
-      manage customer relationships, and provide reliable virtual support.
-    </p>
+  <nav class="navbar">
+    <div class="logo">Adaeze Jennifer Anyiam</div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">My Work</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+
+      <div class="hero-text">
+        <h1>Hi, I'm Adaeze Jennifer Anyiam 👋</h1>
+
+        <h2>
+          Customer Support Specialist |
+          CRM Virtual Assistant |
+          Executive Support |
+          Sales Support
+        </h2>
+
+        <p>
+          I help businesses deliver excellent customer experiences,
+          stay organized, manage customer relationships, and improve
+          day-to-day operations through reliable virtual support.
+        </p>
+
+        <div class="buttons">
+          <a class="button" href="#contact">Hire Me</a>
+          <a class="button secondary" href="#work">View My Work</a>
+        </div>
+      </div>
+
+      <img class="hero-photo" src="profile.jpg" alt="Adaeze Jennifer Anyiam">
+    </div>
   </header>
 
-  <section>
-    <h2>💼 What I Do</h2>
-    <ul>
-      <li>Customer Support – Email, Live Chat & Social Media</li>
-      <li>CRM Management & Customer Data Organization</li>
-      <li>Executive & Administrative Support</li>
-      <li>Lead Follow-up & Sales Support</li>
-      <li>Data Entry, Reporting & Excel</li>
-      <li>Inbox & Communication Support</li>
-      <li>Project & Task Management</li>
-      <li>Canva Designs & Business Documents</li>
-    </ul>
-  </section>
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Reliable support with a customer-first and organized approach.</p>
+    </div>
 
-  <section>
-    <h2>🛠️ Tools & Platforms</h2>
-    <div class="skills">
-      <span class="skill">Google Workspace</span>
-      <span class="skill">Microsoft Excel</span>
-      <span class="skill">Canva</span>
-      <span class="skill">Trello</span>
-      <span class="skill">Notion</span>
-      <span class="skill">Asana</span>
-      <span class="skill">HubSpot</span>
-      <span class="skill">GoHighLevel</span>
-      <span class="skill">LinkedIn Sales Navigator</span>
-      <span class="skill">Apollo.io</span>
-      <span class="skill">Airbnb</span>
+    <div class="about">
+
+      <div class="about-card">
+        <h3>Who I Am</h3>
+        <p>
+          I'm a Customer Support Specialist and CRM Virtual Assistant
+          with over 3 years of experience in customer service,
+          executive support, sales support and administrative assistance.
+        </p>
+
+        <p>
+          I enjoy helping businesses stay organized, communicate
+          effectively with customers, follow up with leads and maintain
+          smooth daily workflows.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>My Approach</h3>
+        <p>
+          I combine communication, organization, problem-solving,
+          attention to detail and data-driven thinking to provide
+          dependable support.
+        </p>
+
+        <p>
+          My goal is simple: make your workload lighter while helping
+          your customers receive professional and timely service.
+        </p>
+      </div>
+
     </div>
   </section>
 
-  <section>
-    <h2>🌟 My Approach</h2>
-    <p>
-      I combine strong communication, organization, customer service,
-      problem-solving, and data-driven thinking to help businesses
-      deliver excellent customer experiences and maintain efficient workflows.
-    </p>
+  <section id="services">
+    <div class="section-title">
+      <h2>My Services</h2>
+      <p>Professional support tailored to business needs.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service">
+        <div class="service-icon">💬</div>
+        <h3>Customer Support</h3>
+        <p>
+          Email, live chat and social media customer support,
+          complaint handling and customer communication.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">📊</div>
+        <h3>CRM Management</h3>
+        <p>
+          Customer data organization, CRM updates, lead tracking
+          and follow-up management.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">📅</div>
+        <h3>Executive Support</h3>
+        <p>
+          Administrative assistance, scheduling, organization,
+          email support and task coordination.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">📞</div>
+        <h3>Sales Support</h3>
+        <p>
+          Lead follow-up, appointment setting, communication
+          and sales administration.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">📑</div>
+        <h3>Data & Reporting</h3>
+        <p>
+          Data entry, spreadsheet organization, reporting and
+          business information management.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🏠</div>
+        <h3>Airbnb Support</h3>
+        <p>
+          Guest communication, booking support, listing assistance
+          and day-to-day coordination.
+        </p>
+      </div>
+
+    </div>
   </section>
 
-  <section>
-    <h2>📩 Let's Work Together</h2>
-    <p>
-      I'm available for remote Customer Support, CRM Virtual Assistant,
-      Executive Assistant, Administrative Support, and Sales Support roles.
-    </p>
+  <section class="projects" id="work">
+    <div class="project-container">
+
+      <div class="section-title">
+        <h2>My Work</h2>
+        <p>Examples of the type of business support I can provide.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <div class="project">
+          <span class="project-tag">CRM</span>
+          <h3>CRM Management System</h3>
+          <p>
+            Organized customer information, lead status,
+            follow-up dates and communication notes to improve
+            customer relationship management.
+          </p>
+        </div>
+
+        <div class="project">
+          <span class="project-tag">Customer Support</span>
+          <h3>Customer Support Workflow</h3>
+          <p>
+            Designed an organized workflow for managing customer
+            inquiries, complaints, follow-ups and response tracking.
+          </p>
+        </div>
+
+        <div class="project">
+          <span class="project-tag">Sales Support</span>
+          <h3>Lead Follow-Up Tracker</h3>
+          <p>
+            Created a structured tracker for monitoring leads,
+            follow-up activities, appointment status and next actions.
+          </p>
+        </div>
+
+        <div class="project">
+          <span class="project-tag">Data</span>
+          <h3>Business Reporting</h3>
+          <p>
+            Organized spreadsheet data and created clear reports
+            to help businesses monitor customer and operational activity.
+          </p>
+        </div>
+
+        <div class="project">
+          <span class="project-tag">Airbnb</span>
+          <h3>Guest Communication</h3>
+          <p>
+            Supported guest communication, booking coordination
+            and professional responses to common guest requests.
+          </p>
+        </div>
+
+        <div class="project">
+          <span class="project-tag">Administration</span>
+          <h3>Virtual Administrative Support</h3>
+          <p>
+            Assisted with email organization, task management,
+            documentation and everyday administrative workflows.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="section-title">
+      <h2>Tools I Use</h2>
+      <p>Technology that helps me deliver organized and efficient support.</p>
+    </div>
+
+    <div class="tools">
+      <span class="tool">Google Workspace</span>
+      <span class="tool">Microsoft Excel</span>
+      <span class="tool">Canva</span>
+      <span class="tool">Trello</span>
+      <span class="tool">Notion</span>
+      <span class="tool">Asana</span>
+      <span class="tool">HubSpot</span>
+      <span class="tool">GoHighLevel</span>
+      <span class="tool">Apollo.io</span>
+      <span class="tool">LinkedIn Sales Navigator</span>
+      <span class="tool">Airbnb</span>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="section-title">
+      <h2>Why Work With Me?</h2>
+      <p>Support that is professional, organized and customer-focused.</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <strong>Customer Focused</strong>
+        <p>I prioritize clear, helpful and professional customer communication.</p>
+      </div>
+
+      <div class="why-card">
+        <strong>Organized</strong>
+        <p>I keep information, tasks and workflows structured and easy to manage.</p>
+      </div>
+
+      <div class="why-card">
+        <strong>Reliable</strong>
+        <p>I take ownership of assigned tasks and aim to deliver consistent support.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+
+      <h2>Let's Work Together</h2>
+
+      <p>
+        Looking for a dependable Customer Support Specialist,
+        CRM Virtual Assistant, Executive Assistant or Sales Support
+        professional?
+      </p>
+
+      <p>
+        I'd be happy to support your business and help make your
+        daily operations more organized.
+      </p>
+
+      <a class="contact-button"
+         href="mailto:adaezejenniferanyiam@gmail.com">
+         Contact Me
+      </a>
+
+    </div>
   </section>
 
   <footer>
