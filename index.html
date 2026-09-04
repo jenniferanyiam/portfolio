@@ -180,6 +180,8 @@
       border-radius: 14px;
       border: 1px solid #e5e7eb;
       transition: transform 0.2s, box-shadow 0.2s;
+      word-wrap: break-word;
+overflow-wrap: break-word;
     }
 
     .service:hover {
@@ -340,6 +342,74 @@ gap: 18px;
         grid-template-columns: repeat(2, 1fr);
       }
     }
+@media print {
+    body {
+        background: white !important;
+        color: #1f2937 !important;
+    }
+
+    section {
+        page-break-before: auto !important;
+        page-break-after: auto !important;
+        page-break-inside: avoid !important;
+        break-before: auto !important;
+        break-after: auto !important;
+        break-inside: avoid !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 30px 20px !important;
+        margin: 0 !important;
+    }
+
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 40px 20px !important;
+    }
+
+    .about,
+    .services-grid,
+    .project-grid,
+    .why-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .navbar {
+        position: static !important;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    a {
+        color: #1f2937 !important;
+        text-decoration: none !important;
+    }
+}
+  }
+
+  .about,
+  .services-grid,
+  .project-grid,
+  .why-grid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  h1, h2, h3, p {
+    page-break-after: avoid;
+  }
+
+  .navbar {
+    position: static !important;
+  }
+
+  header,
+  footer {
+    page-break-inside: avoid;
+  }
+}
   </style>
 </head>
 
