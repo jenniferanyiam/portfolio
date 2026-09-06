@@ -327,6 +327,23 @@ gap: 18px;
         flex-wrap: wrap;
         justify-content: center;
       }
+       @media print {
+        .about {
+          display: block;
+        }
+          .about-card {
+            page break-inside: avoid;
+          }
+        .section-title {
+          page-break-after: avoid;
+        }
+        section {
+          page-break-inside: avoid;
+        }
+      }
+
+     
+            
 
       .hero-content {
         flex-direction: column-reverse;
